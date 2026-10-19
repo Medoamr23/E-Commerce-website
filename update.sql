@@ -1,0 +1,2 @@
+USE aura_store; -- already merged into database.sql; run only on old DBs
+ALTER TABLE users ADD COLUMN IF NOT EXISTS phone VARCHAR(30) NULL, ADD COLUMN IF NOT EXISTS avatar VARCHAR(255) NULL, ADD COLUMN IF NOT EXISTS perm_banned TINYINT(1) NOT NULL DEFAULT 0, ADD COLUMN IF NOT EXISTS banned_until DATETIME NULL;
